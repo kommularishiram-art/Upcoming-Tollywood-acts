@@ -1,0 +1,743 @@
+/* =====================================================
+   GENERAL
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #080808;
+
+    color: white;
+
+}
+
+
+/* =====================================================
+   PAGE
+===================================================== */
+
+.page {
+    min-height: 100vh;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =====================================================
+   HOME PAGE
+===================================================== */
+
+.home-page {
+
+    min-height: 100vh;
+
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,0.72),
+            rgba(0,0,0,0.85)
+        ),
+        url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-attachment: fixed;
+
+}
+
+
+.home-overlay {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+}
+
+
+.home-content {
+
+    max-width: 900px;
+
+    animation: fadeIn 1.5s ease;
+
+}
+
+
+.small-title {
+
+    letter-spacing: 5px;
+
+    color: #ffffff;
+
+    font-size: 16px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.home-content h1 {
+
+    font-size: clamp(55px, 9vw, 110px);
+
+    line-height: 0.95;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+
+}
+
+
+.home-content h1 span {
+
+    color: #ffffff;
+
+}
+
+
+.home-content h2 {
+
+    margin-top: 30px;
+
+    font-size: clamp(22px, 4vw, 40px);
+
+    letter-spacing: 2px;
+
+}
+
+
+.intro-text {
+
+    max-width: 650px;
+
+    margin: 25px auto 35px;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    color: #ddd;
+
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.main-button {
+
+    border: none;
+
+    padding: 17px 35px;
+
+    border-radius: 50px;
+
+    background: #ffffff;
+
+    color: #111;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.main-button:hover {
+
+    transform: scale(1.08);
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 30px rgba(237, 236, 232, 0.455);
+
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+
+    height: 75px;
+
+    padding: 0 6%;
+
+    background: #111;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border-bottom: 1px solid #333;
+
+}
+
+
+.logo {
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    color: #ffffff;
+
+}
+
+
+.back-button {
+
+    border: 1px solid #ffffff;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    padding: 10px 20px;
+
+    border-radius: 25px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+}
+
+
+.back-button:hover {
+
+    background: #ffffff;
+
+    color: #111;
+
+}
+
+
+/* =====================================================
+   ACTORS PAGE
+===================================================== */
+
+.actors-container {
+
+    max-width: 1300px;
+
+    margin: auto;
+
+    padding: 70px 30px;
+
+}
+
+
+.actors-container h1 {
+
+    text-align: center;
+
+    font-size: 45px;
+
+    color: #ffffff;
+
+}
+
+
+.page-description {
+
+    text-align: center;
+
+    color: #aaa;
+
+    margin-top: 12px;
+
+    font-size: 18px;
+
+}
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+.search-box {
+
+    max-width: 500px;
+
+    margin: 40px auto;
+
+}
+
+
+.search-box input {
+
+    width: 100%;
+
+    padding: 16px 20px;
+
+    border-radius: 30px;
+
+    border: 1px solid #555;
+
+    outline: none;
+
+    background: #151515;
+
+    color: white;
+
+    font-size: 16px;
+
+}
+
+
+.search-box input:focus {
+
+    border-color: #ffffff;
+
+}
+
+
+/* =====================================================
+   ACTORS GRID
+===================================================== */
+
+.actors-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 25px;
+
+}
+
+
+.actor-card {
+
+    background: #151515;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    border: 1px solid #292929;
+
+    transition: 0.35s;
+
+}
+
+
+.actor-card:hover {
+
+    transform: translateY(-10px);
+
+    border-color: #ffffff;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.5);
+
+}
+
+
+.actor-card img {
+
+    width: 100%;
+
+    height: 300px;
+
+    object-fit: cover;
+
+}
+
+
+.actor-info {
+
+    padding: 20px;
+
+}
+
+
+.actor-info h2 {
+
+    font-size: 22px;
+
+}
+
+
+.actor-info p {
+
+    color: #999;
+
+    margin-top: 7px;
+
+}
+
+
+/* =====================================================
+   ACTOR DETAILS
+===================================================== */
+
+.actor-details {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 60px 30px;
+
+}
+
+
+.actor-profile {
+
+    display: grid;
+
+    grid-template-columns: 300px 1fr;
+
+    gap: 40px;
+
+    align-items: center;
+
+    margin-bottom: 60px;
+
+}
+
+
+.actor-profile img {
+
+    width: 100%;
+
+    height: 400px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
+}
+
+
+.actor-profile h1 {
+
+    font-size: 55px;
+
+    color: #ffffff;
+
+    margin-bottom: 15px;
+
+}
+
+
+.actor-profile p {
+
+    color: #bbb;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =====================================================
+   MOVIES
+===================================================== */
+
+.movies-title {
+
+    font-size: 35px;
+
+    margin-bottom: 25px;
+
+    color: #ffffff;
+
+}
+
+
+.movies-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(260px, 1fr));
+
+    gap: 25px;
+
+}
+
+
+.movie-card {
+
+    background: #151515;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    border: 1px solid #292929;
+
+    transition: 0.3s;
+
+}
+
+
+.movie-card:hover {
+
+    transform: translateY(-7px);
+
+    border-color: #ffffff;
+
+}
+
+
+.movie-card img {
+
+    width: 100%;
+
+    height: 330px;
+
+    object-fit: cover;
+
+}
+
+
+.movie-info {
+
+    padding: 20px;
+
+}
+
+
+.movie-info h3 {
+
+    font-size: 24px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.movie-info p {
+
+    color: #aaa;
+
+    margin: 7px 0;
+
+}
+
+
+.view-button {
+
+    width: 100%;
+
+    margin-top: 15px;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    color: #111;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+/* =====================================================
+   MODAL
+===================================================== */
+
+.modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0,0,0,0.85);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+    z-index: 9999;
+
+}
+
+
+.modal-content {
+
+    background: #151515;
+
+    max-width: 700px;
+
+    width: 100%;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    border-radius: 15px;
+
+    padding: 35px;
+
+    position: relative;
+
+    border: 1px solid #444;
+
+}
+
+
+.close-button {
+
+    position: absolute;
+
+    right: 20px;
+
+    top: 15px;
+
+    background: transparent;
+
+    border: none;
+
+    color: white;
+
+    font-size: 35px;
+
+    cursor: pointer;
+
+}
+
+
+.modal-content h1 {
+
+    color: #ffffff;
+
+    margin-bottom: 20px;
+
+}
+
+
+.modal-content p {
+
+    color: #ccc;
+
+    line-height: 1.7;
+
+    margin: 10px 0;
+
+}
+
+
+/* =====================================================
+   ANIMATION
+===================================================== */
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .navbar {
+
+        padding: 0 20px;
+
+    }
+
+    .logo {
+
+        font-size: 18px;
+
+    }
+
+    .actors-container h1 {
+
+        font-size: 32px;
+
+    }
+
+    .actor-profile {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .actor-profile img {
+
+        height: 350px;
+
+        max-width: 300px;
+
+        margin: auto;
+
+    }
+
+    .actor-profile h1 {
+
+        font-size: 40px;
+
+    }
+
+}

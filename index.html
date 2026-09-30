@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Tollywood Upcoming Movies</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+<!-- =====================================================
+     HOME PAGE
+===================================================== -->
+
+<section id="homePage" class="page home-page">
+
+    <div class="home-overlay">
+
+        <div class="home-content">
+
+            <p class="small-title">
+                🎬 TOLLYWOOD MOVIE WORLD
+            </p>
+
+            <h1>
+                WELCOME TO<br>
+                <span>TOLLYWOOD</span>
+            </h1>
+
+            <h2>
+                UPCOMING MOVIES OF YOUR STARS
+            </h2>
+
+            <p class="intro-text">
+                Discover your favourite Telugu stars,
+                their upcoming movies, release dates
+                and movie information — all in one place.
+            </p>
+
+            <button
+                class="main-button"
+                onclick="showActors()">
+
+                ⭐'s OF TOLLYWOOD
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ACTORS PAGE
+===================================================== -->
+
+<section id="actorsPage" class="page hidden">
+
+    <header class="navbar">
+
+        <div class="logo">
+            🎬 TOLLYWOOD
+        </div>
+
+        <button
+            class="back-button"
+            onclick="showHome()">
+
+            ← Home
+
+        </button>
+
+    </header>
+
+
+    <div class="actors-container">
+
+        <h1>⭐ TOLLYWOOD ACTORS</h1>
+
+        <p class="page-description">
+            Select your favourite actor to see their
+            upcoming movies.
+        </p>
+
+
+        <!-- Search -->
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="actorSearch"
+                placeholder="Search actor..."
+                onkeyup="searchActors()">
+
+        </div>
+
+
+        <!-- Actors -->
+
+        <div
+            id="actorsGrid"
+            class="actors-grid">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ACTOR DETAILS PAGE
+===================================================== -->
+
+<section id="actorDetailsPage" class="page hidden">
+
+    <header class="navbar">
+
+        <div class="logo">
+            🎬 TOLLYWOOD
+        </div>
+
+        <button
+            class="back-button"
+            onclick="showActors()">
+
+            ← Actors
+
+        </button>
+
+    </header>
+
+
+    <div
+        id="actorDetails"
+        class="actor-details">
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MOVIE DETAILS MODAL
+===================================================== -->
+
+<div
+    id="movieModal"
+    class="modal hidden">
+
+    <div class="modal-content">
+
+        <button
+            class="close-button"
+            onclick="closeMovie()">
+
+            ×
+
+        </button>
+
+        <div id="movieDetails"></div>
+
+    </div>
+
+</div>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
